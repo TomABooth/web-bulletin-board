@@ -15,7 +15,7 @@
             defer
             src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
         ></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="form.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,18 +38,21 @@
             <nav>
                 <a href="/">Home</a>
                 <a id="sign-out-link" href="auth">Sign Out</a>
-                <a id="add-post" href="/form">Add Post</a>
             </nav>
         </header>
-
         <main>
-            <ul id="new-post-area"></ul>
-            <li class="post">
-                <h2>Dog Walker</h2>
-                <p>Dog walking services, please call 555-555-5555 for more</p>
-                <span class="category" title="Services"></span>
-            </li>
-            <p id="error-display"></p>
+            <form id="post-form">
+                <label>
+                    <div>Title</div>
+                    <input name="title" required placeholder="Title of Post" />
+                </label>
+                <label>
+                    <div>Text</div>
+                    <input name="text" required placeholder="Body of Post" />
+                </label>
+                <button>Add Post</button>
+                <p id="error-display"></p>
+            </form>
         </main>
     </body>
 </html>
