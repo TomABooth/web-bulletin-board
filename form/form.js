@@ -13,9 +13,9 @@ postForm.addEventListener('submit', async (e) => {
 
     const post = {
         title: formData.get('title'),
-        text: formData.get('body'),
+        text: formData.get('text'),
     };
-
+    console.log(post);
     const response = await addPost(post);
     error = response.error;
 
